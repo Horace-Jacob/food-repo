@@ -1,0 +1,12 @@
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\bin\Debug\net7.0\data-and-repo-pattern.deps.json
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\bin\Debug\net7.0\data-and-repo-pattern.dll
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\bin\Debug\net7.0\data-and-repo-pattern.pdb
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\data-and-repo-pattern.csproj.AssemblyReference.cache
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\data-and-repo-pattern.GeneratedMSBuildEditorConfig.editorconfig
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\data-and-repo-pattern.AssemblyInfoInputs.cache
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\data-and-repo-pattern.AssemblyInfo.cs
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\data-and-repo-pattern.csproj.CoreCompileInputs.cache
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\data-and-repo-pattern.dll
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\refint\data-and-repo-pattern.dll
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\data-and-repo-pattern.pdb
+D:\Test\C#Testing\food-order-system\data-and-repo-pattern\obj\Debug\net7.0\ref\data-and-repo-pattern.dll

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "euJpLaRvw9qymTkelnIOx4yQFHvtVIAMMui0M2Gysy0=",
+  "Source": "food-order-system-api",
+  "BasePath": "_content/food-order-system-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
