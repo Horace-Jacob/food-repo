@@ -1,3 +1,5 @@
+using data_and_repo_pattern.helper.MenuApiRequest;
+using data_and_repo_pattern.helper.OrderApiRequest;
 using data_and_repo_pattern.helper.UserApiRequest;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,8 +8,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-builder.Services.AddScoped<IUserApiRequest, UserApiRequest>();
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("") });
+builder.Services.AddHttpClient();
 
+
+builder.Services.AddScoped<IUserApiRequest, UserApiRequest>();
+builder.Services.AddScoped<IMenuApiRequest, MenuApiRequest>();
+builder.Services.AddScoped<IOrderApiRequest, OrderApiRequest>();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
@@ -21,7 +35,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
 
 app.UseAuthorization();

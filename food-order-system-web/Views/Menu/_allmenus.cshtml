@@ -1,0 +1,11 @@
+﻿@model IEnumerable<data_and_repo_pattern.database.tbMenu>
+
+@foreach(var menu in Model)
+{
+    <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+      <img class="img-fluid mb-3" src="@menu.Image"/>
+      <h5 class="p-name">@menu.Name</h5>
+      <h4 class="p-price">$@menu.Price</h4>
+      <div class="btn shop-buy-btn" id="buynow" onclick="AddToCart(@menu.MenuId)">Buy Now</div>
+     </div>
+}

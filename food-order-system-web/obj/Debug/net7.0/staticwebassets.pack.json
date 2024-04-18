@@ -13,6 +13,30 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Test\\C#Testing\\food-order-system\\food-order-system-web\\wwwroot\\imgs\\banner.jpg",
+      "PackagePath": "staticwebassets\\imgs\\banner.jpg"
+    },
+    {
+      "Id": "D:\\Test\\C#Testing\\food-order-system\\food-order-system-web\\wwwroot\\imgs\\burger.jpg",
+      "PackagePath": "staticwebassets\\imgs\\burger.jpg"
+    },
+    {
+      "Id": "D:\\Test\\C#Testing\\food-order-system\\food-order-system-web\\wwwroot\\imgs\\logo.png",
+      "PackagePath": "staticwebassets\\imgs\\logo.png"
+    },
+    {
+      "Id": "D:\\Test\\C#Testing\\food-order-system\\food-order-system-web\\wwwroot\\imgs\\pizza.jpg",
+      "PackagePath": "staticwebassets\\imgs\\pizza.jpg"
+    },
+    {
+      "Id": "D:\\Test\\C#Testing\\food-order-system\\food-order-system-web\\wwwroot\\imgs\\pizza1.jpg",
+      "PackagePath": "staticwebassets\\imgs\\pizza1.jpg"
+    },
+    {
+      "Id": "D:\\Test\\C#Testing\\food-order-system\\food-order-system-web\\wwwroot\\imgs\\profile.jpg",
+      "PackagePath": "staticwebassets\\imgs\\profile.jpg"
+    },
+    {
       "Id": "D:\\Test\\C#Testing\\food-order-system\\food-order-system-web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

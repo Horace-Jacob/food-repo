@@ -12,9 +12,17 @@ build_property.RootNamespace = food_order_system_web
 build_property.ProjectDir = D:\Test\C#Testing\food-order-system\food-order-system-web\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\Test\C#Testing\food-order-system\food-order-system-web
 build_property._RazorSourceGeneratorDebug = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Cart/_cartitems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxfY2FydGl0ZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
@@ -22,6 +30,34 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Menu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Menu/_allmenus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxfYWxsbWVudXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Profile/_orderdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfb3JkZXJkZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Profile/_userprofile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxfdXNlcnByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Register/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Shared/Error.cshtml]
@@ -32,8 +68,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/User/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Single/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luZ2xlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/Single/_singlemenus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luZ2xlXF9zaW5nbGVtZW51cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Test/C\#Testing/food-order-system/food-order-system-web/Views/_ViewImports.cshtml]

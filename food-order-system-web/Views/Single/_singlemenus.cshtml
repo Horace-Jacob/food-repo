@@ -1,0 +1,20 @@
+﻿@model data_and_repo_pattern.database.tbMenu;
+<div class="row mt-5">
+
+
+    <div class="col-lg-5 col-md-6 col-sm-12" >
+        <img class="img-fluid w-100 pb-1" src="@Model.Image" id="mainImg">
+    </div>
+            
+    <div class="col-lg-6 col-md-12 col-12">
+        <h6></h6>
+        <h3 class="py-4">@Model.Name</h3>
+        <h2>$@Model.Price</h2>
+        <input type="number" name="product_quantity" value="1" id="quantity">
+        <button class="buy-btn" name="add_to_cart" onclick="AddToCartStorage('@Model.MenuId', '@Model.Name', '@Model.Price')"> Add To Cart</button>
+                
+        <h4 class="mt-5 mb-5">Product details</h4>
+        <span>@Model.Description
+        </span>
+    </div>
+    	</div>

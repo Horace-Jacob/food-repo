@@ -1,0 +1,53 @@
+﻿@model IEnumerable<data_and_repo_pattern.ViewModel.CartViewModel>
+
+    <table class="mt-5 pt-5">
+            <tr>
+                <th>Discription</th>
+                <!-- <th>Price</th> -->
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            @foreach(var item in Model){
+                <tr>
+                <td>
+                    <div class="product-info">
+                        <div>
+                            <p>@item.Name</p>
+                            <small><span>$</span>@item.Price</small>
+                            <br>
+                            <form>
+                              <input type="hidden" name="" value=""/>
+                                <input type="submit" name="remove_product" class="remove-btn" value="remove" onclick="RemoveItem(@item.id)" />
+                            </form>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    
+                  <span>@item.Quantity</span>
+                    
+
+                </td>
+                <td>
+                    <span>$</span>
+                    <span class="product-price">@item.Subtotal</span>
+                </td>
+            </tr>
+            }
+            
+         
+            
+            
+        </table>
+        <!-- total cart -->
+        
+            <div class="cart-total">
+                <table>
+                    
+                    <tr>
+                        <td>Total </td>
+                        <td>$ @Model.Sum(a => a.Subtotal)</td>
+                    </tr>
+                </table>
+            </div>
+

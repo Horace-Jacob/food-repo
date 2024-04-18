@@ -1,0 +1,31 @@
+﻿@model IEnumerable<data_and_repo_pattern.database.tbMenu>
+
+<div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Manage</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+            
+                      
+                </tr>
+            </thead>
+            <tbody>
+    @foreach(var menu in Model)
+    {
+                
+        <tr>
+            <td><button>Remove</button><button>Edit</button></td>
+            <td><img src="@menu.Image" alt="Product Image" width="50"></td>
+            <td>@menu.Name</td>
+            <td>@menu.Description</td>
+            <td>$@menu.Price</td>
+        </tr>
+                    
+    }
+        </tbody>
+    </table>
+</div>

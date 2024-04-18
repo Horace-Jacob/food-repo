@@ -1,0 +1,99 @@
+﻿<section class="cart container my-5 py-5">
+        <div class="container mt-5">
+            <h2 class="font-weight-bolde">Your Cart</h2>
+            <hr>
+        </div>
+        <div id="cartitems"></div>
+        <div class="checkout-container">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Checkout
+            </button>
+        </div>
+</section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Checkout Form</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="d-flex flex-column">
+              <div>
+                  <label>Address:</label><br/>
+                <input class="form-control" type="text" name="address" id="address" placeholder="Enter your address" />
+              </div>
+              <div class="mt-3">
+                  <label>PhoneNumber:</label><br/>
+                   <input class="form-control" type="number" name="phonenumber" id="phonenumber" placeholder="Enter your phone number" />
+              </div>
+          </div>
+        
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="Checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section scripts{
+    <script>
+        $(function(){
+            CallCartPartial();
+        })
+
+        function CallCartPartial(){
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("_cartitems", "Cart")',
+				type: "GET",
+				success: function(response){
+					$("#cartitems").empty().append(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+
+        function RemoveItem(id){
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("RemoveItem", "Cart")',
+				type: "GET",
+                data: {id},
+				success: function(response){
+					CallCartPartial();
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+
+        function Checkout(){
+            let address = document.getElementById("address").value;
+            let phonenumber = document.getElementById("phonenumber").value;
+            let userid = localStorage.getItem("id");
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("Checkout", "Cart")',
+				type: "GET",
+                data: {address, phonenumber, userid},
+				success: function(response){
+					CallCartPartial();
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+    </script>
+}

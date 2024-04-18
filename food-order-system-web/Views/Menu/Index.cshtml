@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Menu";
+}
+
+<section id="shop" class="my-5 py-5">
+  <div class="container text-center mt-5 py-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h3 class="meal-heading">Meal</h3>
+      </div>
+      <div class="col-md-3 text-right">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search...">
+          <button class="btn btn-primary" id="searchBtn">Search</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p>Here you can check out our meal</p>
+  </div>
+  <div class="row mx-auto container" id="allmenus" >
+  </div>
+</section>
+
+@section scripts{
+    <script>
+        $(function(){
+            CallAllMenuPartial();
+        })
+        
+        function AddToCart(id){
+            const token = localStorage.getItem("token");
+            if(token === null){
+                window.open("https://localhost:7297/login", "_blank");
+            }else{
+                localStorage.setItem("singlemenu", id);
+                window.open("https://localhost:7297/single", "_blank");
+            }
+        }
+
+        function CallAllMenuPartial(){
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("_allmenus", "Menu")',
+				type: "GET",
+				success: function(response){
+					$("#allmenus").empty().append(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+    </script>
+}

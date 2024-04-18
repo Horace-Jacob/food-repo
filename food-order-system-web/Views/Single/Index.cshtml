@@ -1,0 +1,49 @@
+﻿@model data_and_repo_pattern.database.tbMenu;
+
+<section class="container single-product my-5 pt-5">
+		<div id="singlemenus"></div> 
+	
+</section>
+
+@section scripts{
+    <script>
+        $(function(){
+            CallSingleMenuPartial();
+        })
+        
+        
+
+        function CallSingleMenuPartial(){
+            const id = localStorage.getItem("singlemenu");
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("_singlemenus", "Single")',
+				type: "GET",
+                data: {id},
+				success: function(response){
+					$("#singlemenus").empty().append(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+
+        function AddToCartStorage(id, name, price){
+			let quantity = document.getElementById("quantity").value;
+			let subtotal = quantity * price;
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("AddToCart", "Single")',
+				type: "GET",
+                data: {id, name, quantity, subtotal, price},
+				success: function(response){
+					console.log(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+    </script>
+}

@@ -1,0 +1,51 @@
+﻿
+
+@{
+    ViewBag.Title = "Menu";
+}
+
+<div id="admin-panel">
+        <div id="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/">Order</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="navbar">
+                <h2>Dashboard</h2>
+                <div>
+                    <a href="add_menu.html">Add menu</a>
+                </div>
+            </div>
+
+            <div id="allmenu"></div>
+        </div>
+    </div>
+
+@section scripts{
+    <script>
+        $(function(){
+            CallAllMenuPartial();
+        })
+        
+
+        function CallAllMenuPartial(){
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("_allmenu", "Menu")',
+				type: "GET",
+				success: function(response){
+					$("#allmenu").empty().append(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+    </script>
+}

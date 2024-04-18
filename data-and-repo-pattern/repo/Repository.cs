@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infra.Repository
+namespace data_and_repo_pattern.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {

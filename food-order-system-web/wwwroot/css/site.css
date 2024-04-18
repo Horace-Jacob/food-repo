@@ -1,22 +1,388 @@
-html {
-  font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+.nav-buttons {
+    margin-left: 60%;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: 'Madimi One', sans-serif;
 }
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+h6 {
+    color: #d8d8d8;
+}
+
+button {
+    font-size: 0.8rem;
+    font-weight: 900;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: aliceblue;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+    button:hover {
+        background-color: grey;
+    }
+
+.navbar {
+    font-size: 16px;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 0 20px;
+    color: #000;
+    transition: 0.4s ease;
+}
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar i:hover,
+    .navbar-light .navbar-nav .nav-link.active
+    .navbar i:hover {
+        color: black;
+    }
+
+.navbar i {
+    font-size: 1.2rem;
+    padding: 0 0.7px;
+    transition: 0.4s ease;
+    /* font-weight: 500; */
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+@media only screen and (max-width:990px) {
+    .nav-buttons {
+        margin: 10px;
+    }
+
+        .nav-buttons ul {
+            margin: 1rem;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+            .nav-buttons ul .fas {
+                margin: 20px 5px 10px 20px;
+            }
+}
+
+
+
+
+
+#home {
+    background-image: url('../imgs/banner.jpg');
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position-x: 0px;
+    background-position-y: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer {
+    background-color: black;
+}
+
+    footer h5 {
+        color: #D8D8D8;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    footer li {
+        padding-bottom: 4px;
+    }
+
+        footer li a {
+            font-size: 0.8rem;
+            color: grey;
+            text-decoration: none;
+        }
+
+            footer li a:hover {
+                color: white;
+            }
+
+    footer .copyright a {
+        color: black;
+        height: 40px;
+        width: 40px;
+        background-color: #ffff;
+        display: inline-block;
+        text-align: center;
+        line-height: 38px;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        margin: 0 5px;
+    }
+
+        footer .copyright a:hover {
+            color: #ffff;
+            background-color: grey;
+        }
+
+    footer p {
+        color: white;
+    }
+
+    footer .copyright img {
+        width: 40%;
+    }
+
+/* Cart */
+
+.cart table {
+    width: 100%;
+    ;
+    border-collapse: collapse;
+}
+
+.cart .product-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart th {
+    text-align: left;
+    padding: 5px 10px;
+    color: white;
+    background-color: grey;
+}
+
+.cart td {
+    padding: 10px 20px;
+}
+
+    .cart td img {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+
+    .cart td input {
+        width: 40px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    .cart td a {
+        color: grey;
+    }
+
+.cart .remove-btn {
+    color: grey;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: white;
+    border: none;
+    width: 100%;
+}
+
+.cart .edit-btn {
+    color: grey;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: white;
+    border: none;
+}
+
+.cart .product-info p {
+    margin: 3px;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .cart-total table {
+        width: 100%;
+        max-width: 500px;
+        border-top: 3px solid grey;
+    }
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkout-btn {
+    /* display:flex;
+    justify-content: flex-end; */
+    background-color: grey;
+    color: white;
+}
+
+/* login */
+
+#login-form {
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid grey;
+}
+
+    #login-form input {
+        width: 50%;
+        margin: 5px auto;
+    }
+
+    #login-form #login-btn {
+        background-color: grey;
+        color: white;
+    }
+
+    #login-form #register-url {
+        color: grey;
+    }
+
+/* Register */
+
+
+#register-form {
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 50px;
+    border-top: 1px solid grey;
+}
+
+#register-fomr input {
+    width: 30%;
+    margin: 5px auto;
+}
+
+#register-form #register-btn {
+    background-color: grey;
+    color: white;
+}
+
+#register-form #login-url {
+    color: grey;
+}
+
+/* order */
+
+.order table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order .product-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order th {
+    padding: 5px 10px;
+    color: white;
+    background-color: grey;
+    /* text-align: left; */
+}
+
+    .order th:nth-child(2) {
+        /* text-align: right; */
+    }
+
+.order td {
+    padding: 10px 20px;
+}
+
+    .order td img {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+
+.order .order-details-btn {
+    color: white;
+    background-color: grey;
+}
+
+
+/* account */
+.account-photo {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.account-info {
+    text-align: center;
+}
+
+    .account-info #order-btn,
+    #logout-btn {
+        color: grey;
+        text-decoration: none;
+    }
+
+.meal-heading {
+    display: inline-block;
+    text-align: center;
+}
+
+.search-box {
+    display: inline-block;
+    float: right;
+}
+
+    .search-box input {
+        margin-right: 10px;
+    }

@@ -1,0 +1,75 @@
+﻿    <section class="my-5 py-5">
+        <div class="row container mx-auto">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="text-center mt-3 pt-5 pl-lg-5"> <!-- Adjusted padding on large screens -->
+                    <p class="text-center" style="color:green"></p>
+                    <p class="text-center" style="color:green"></p>
+                    <h3 class="font-weight-bold">Account Info</h3>
+                    <div class="account-info" id="account-info">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="account-photo col-lg-6 col-md-12 col-sm-12">
+                <img class="img-fluid mb-3" src="./imgs//profile.jpg" />
+            </div>
+        </div>
+    </section>
+
+    <section id="orders" class="order container my-5 py-5">
+        <div class="container mt-2">
+            <h2 class="font-weight-bold text-center">Your Orders</h2>
+            <hr class="mx-auto">
+        </div>
+        <div id="order-detail"></div>
+       
+</section>
+
+@section scripts{
+    <script>
+        $(function(){
+            CallAccountPartial();
+            CallOrderPartial();
+        })
+        
+        
+
+        function CallAccountPartial(){
+            const id = localStorage.getItem("id");
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("_userprofile", "Profile")',
+				type: "GET",
+                data: {id},
+				success: function(response){
+					$("#account-info").empty().append(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+        function CallOrderPartial(){
+            const userid = localStorage.getItem("id");
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("_orderdetails", "Profile")',
+				type: "GET",
+                data: {userid},
+				success: function(response){
+					$("#order-detail").empty().append(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+
+        function logout(){
+            location.href = "/login";
+            localStorage.removeItem("id");
+            localStorage.removeItem("token");
+        }
+
+    </script>
+}

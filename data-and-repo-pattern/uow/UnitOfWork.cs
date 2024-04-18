@@ -1,6 +1,6 @@
 ﻿using data_and_repo_pattern.database;
 using data_and_repo_pattern.repo;
-using Infra.Repository;
+using data_and_repo_pattern.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,8 @@ namespace data_and_repo_pattern.uow
     {
         private FoodDbContext _ctx;
         private IRepository<tbUser> _userRepo;
+        private IRepository<tbMenu> _menuRepo;
+        private IRepository<tbOrder> _orderRepo;
 
         public UnitOfWork(FoodDbContext ctx)
         {
@@ -34,6 +36,30 @@ namespace data_and_repo_pattern.uow
                     _userRepo = new Repository<tbUser>(_ctx);
                 }
                 return _userRepo;
+            }
+        }
+
+        public IRepository<tbMenu> menuRepo
+        {
+            get
+            {
+                if (_menuRepo == null)
+                {
+                    _menuRepo = new Repository<tbMenu>(_ctx);
+                }
+                return _menuRepo;
+            }
+        }
+
+        public IRepository<tbOrder> orderRepo
+        {
+            get
+            {
+                if (_orderRepo == null)
+                {
+                    _orderRepo = new Repository<tbOrder>(_ctx);
+                }
+                return _orderRepo;
             }
         }
 

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<data_and_repo_pattern.database.tbOrder>
+
+<table class="mt-5 pt-5">
+            <tr>
+                <th>Order id</th>
+                <th>Order cost</th>
+                <th>Order Status</th>
+                <th>Order Date</th>
+                <th>Order details</th>
+                
+            </tr>
+    @foreach(var order in Model)
+    {
+        <tr>
+                <td>
+                    <span>@order.OrderId</span> 
+                </td>
+                <td>
+                  <span>$ @order.Price</span>
+                </td>
+                <td>
+                  <span>@order.Status</span>
+                </td>
+                <td>
+                  <span>@order.Time</span>
+                </td>
+                <td>
+                    <a href="/" class="btn order-details-btn">Details</a>
+                </td>
+            </tr>
+    }
+            
+          
+           
+        </table>

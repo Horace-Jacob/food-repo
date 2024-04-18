@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div id="admin-panel">
+        <div id="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/">Order</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="navbar">
+                <h2>Dashboard</h2>
+                <div>
+                    <a href="/add">Add menu</a>
+                </div>
+            </div>
+
+            
+            
+                <div id="dashboard-stats">
+                    <div class="stat">
+                        <h3>Total Menu Items</h3>
+                        <p id="total-menu-items">0</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Pending Orders</h3>
+                        <p id="total-pending-orders">0</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Delivered Orders</h3>
+                        <p id="total-delivered-orders">0</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Users</h3>
+                        <p id="total-users">0</p>
+                    </div>
+                </div>
+            
+                <table>
+                    <!-- Your table content -->
+                </table>
+            </div>
+            
+        </div>
