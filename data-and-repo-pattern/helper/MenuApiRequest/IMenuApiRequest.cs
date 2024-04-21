@@ -13,5 +13,7 @@ namespace data_and_repo_pattern.helper.MenuApiRequest
         Task<tbMenu> GetMenuById(int id);
         Task<List<tbMenu>> GetAllMenus();
         Task<tbMenu> CreateNewMenu(tbMenu menu);
+        Task<int> DeleteMenu(int id);
+        Task<int> GetTotalMenu();
     }
 }

@@ -83,6 +83,7 @@ namespace food_order_system_web.Controllers
                         order.PhoneNumber = phonenumber;
                         order.Time = DateTime.Now;
                         order.UserID = userid;
+                        order.OrderItem = item.Name;
                         await _iorder.CreateNewOrder(order);
                     }
                 }

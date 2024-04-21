@@ -42,5 +42,12 @@ namespace food_order_system.Controllers
             var result = await _iuser.LoginUser(user);
             return Ok(result);
         }
+
+        [HttpGet("api/user/getusers")]
+        public async Task<IActionResult> GetUserCount()
+        {
+            var result = await _iuser.GetUserCount();
+            return Ok(result);
+        }
     }
 }

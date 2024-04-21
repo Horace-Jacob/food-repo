@@ -1,4 +1,5 @@
-﻿using data_and_repo_pattern.helper.MenuApiRequest;
+﻿using data_and_repo_pattern.database;
+using data_and_repo_pattern.helper.MenuApiRequest;
 using Microsoft.AspNetCore.Mvc;
 
 namespace food_order_system_admin.Controllers
@@ -15,12 +16,16 @@ namespace food_order_system_admin.Controllers
             return View(); 
         }
 
-        
-
         public async Task<IActionResult> _allmenu()
         {
             var result = await _imenu.GetAllMenus();
             return PartialView("_allmenu", result);
+        }
+
+        public async Task<IActionResult> RemoveMenu(int id)
+        {
+            var result = await _imenu.DeleteMenu(id);
+            return Ok(result);
         }
     }
 }

@@ -27,7 +27,7 @@
                     <input type="submit" class="btn" id="login-btn" name="login_btn" value="login">
                 </div>
                 <div class="form-group">
-                    <a id="register-url" href="registration.html" class=" btn">Don't have account? Register</a>
+                    <a id="register-url" href="/register" class=" btn">Don't have account? Register</a>
                 </div>
             </form>
         </div>
@@ -46,10 +46,11 @@
                     if(data.status !== "success"){
                         let errorElement = document.getElementById("login-error");
                         errorElement.innerText = data.status;
-                    }else{
+                    }
+                    else{
                         localStorage.setItem("token", data.token);
                         localStorage.setItem("id", data.userid);
-                        location.href = "/"
+                        location.href = "/";
                     }
                 }
             })

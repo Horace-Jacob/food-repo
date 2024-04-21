@@ -1,0 +1,36 @@
+﻿@model IEnumerable<data_and_repo_pattern.database.tbOrder>
+
+<table>
+                <thead>
+                    <tr>
+                        <th>Manage</th>
+                        <th>Order number</th>
+                        <th>Quantity</th>
+                        <th>Time</th>
+                        <th>Price</th>
+                           <th>Status</th>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+        @foreach(var order in Model)
+        {
+             <tr>
+                        <td>
+                    @if(order.Status == "Pending")
+                    {
+                        <button onclick="MarkAsDelivered('@order.OrderId')">Mark as delivered</button>
+                    }
+                    <button onclick="ViewItemDetails('@order.OrderId')">View</button>
+                </td> 
+                        <td>@order.OrderId</td>
+                        <td>@order.Quantity</td>
+                        <td>@order.Time</td>
+                        <td>$@order.Price</td>
+                        <td>@order.Status</td>
+                    </tr>
+        }
+       
+                    
+                </tbody>
+            </table>

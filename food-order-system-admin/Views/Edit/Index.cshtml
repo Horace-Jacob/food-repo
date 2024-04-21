@@ -2,8 +2,93 @@
     ViewBag.Title = "Edit Menu";
 }
 
+<div id="admin-panel">
+        <div id="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/order">Order</a></li>
+                <li><a href="/login">Logout</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div id="navbar">
+                <h2>Edit Menu</h2>
+             
+            </div>
+
+            <div id="editdata"></div>
+        </div>
+    </div>
+
 @section scripts{
     <script>
+        let image = "";
+        $(function(){
+            Auth();
+            CallAdminDataPartial();
+        })
+        
+
+        function CallAdminDataPartial(){
+            const id = localStorage.getItem("edititem");
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("_editdata", "Edit")',
+				type: "GET",
+                data: {id},
+				success: function(response){
+					$("#editdata").empty().append(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+
+        function imageUploaded() {
+            let file = document.querySelector(
+                'input[type=file]')['files'][0];
+ 
+            let reader = new FileReader();
+            console.log("next");
+ 
+            reader.onload = function () {
+                image = reader.result;
+ 
+                imageBase64Stringsep = image;
+ 
+                // alert(imageBase64Stringsep);
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function EditData(){
+            let name = document.getElementById("product-name").value;
+            let description = document.getElementById("product-description").value;
+            let price = document.getElementById("product-price").value;
+            const menuid = localStorage.getItem("edititem");
+            $.ajax({
+                cache: false,
+                url: '@Url.Action("UpdateMenu", "Edit")',
+                type: "POST",
+                data: {menuid, name, description, price, image},
+                success: function(data){
+                   console.log(data);
+                   alert("Menu Updated");
+                   location.href = "/menu";
+                }
+            })
+        }
+
+        function Auth(){
+           const token = localStorage.getItem("token");
+           if(token == null){
+               location.href = "/login";
+           }
+       }
 
     </script>
 }

@@ -11,5 +11,6 @@ namespace data_and_repo_pattern.ViewModel
         public string? status { get; set; }
         public string? token { get; set; }
         public int? userid { get; set; }
+        public string? Role { get; set; }
     }
 }

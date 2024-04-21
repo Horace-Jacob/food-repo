@@ -10,8 +10,8 @@
             <ul>
                 <li><a href="/">Dashboard</a></li>
                 <li><a href="/menu">Menu</a></li>
-                <li><a href="/">Order</a></li>
-                <li><a href="/">Logout</a></li>
+                <li><a href="/order">Order</a></li>
+                <li><a href="/login">Logout</a></li>
             </ul>
         </div>
 
@@ -45,6 +45,15 @@
 
 @section scripts{
     <script>
+        $(function(){
+            Auth();
+        })
+        function Auth(){
+           const token = localStorage.getItem("token");
+           if(token == null){
+               location.href = "/login";
+           }
+       }
         let image = "";
         $('#new-product-form').submit(function (event){
             let name = document.getElementById("product-name").value;
@@ -58,7 +67,8 @@
                 type: "POST",
                 data: {name, description, price, image},
                 success: function(data){
-                   console.log(data);
+                   alert("new menu added");
+                   location.href = "/menu";
                 }
             })
         })

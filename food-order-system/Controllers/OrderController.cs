@@ -34,6 +34,35 @@ namespace food_order_system.Controllers
             return Ok(result);
         }
 
+        [HttpGet("api/menu/getpendingtotal")]
+        public async Task<IActionResult> GetPendingTotal()
+        {
+            var result = await _iorder.GetPendingTotal();
+            return Ok(result);
+        }
+
+        [HttpGet("api/menu/getdeliveredtotal")]
+        public async Task<IActionResult> GetDeliveredTotal()
+        {
+            var result = await _iorder.GetDeliveredTotal();
+            return Ok(result);
+        }
+
+        [HttpGet("api/menu/updateorderstatus")]
+        public async Task<IActionResult> UpdateOrderStatus(int id)
+        {
+            var result = await _iorder.UpdateOrderStatus(id);
+            return Ok(result);
+        }
+
+        [HttpGet("api/menu/getorderdetails")]
+        public async Task<IActionResult> GetOrderDetail(int id)
+        {
+            var result = await _iorder.GetOrderDetail(id);
+            return Ok(result);
+        }
+
+
 
         [HttpPost("api/order/createorder")]
         public async Task<IActionResult> CreateNewOrder(tbOrder menu)

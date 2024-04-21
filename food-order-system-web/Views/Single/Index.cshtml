@@ -38,7 +38,7 @@
 				type: "GET",
                 data: {id, name, quantity, subtotal, price},
 				success: function(response){
-					console.log(response);
+					location.href = "/cart";
 				},
 				error: function(error){
 					console.log(error)

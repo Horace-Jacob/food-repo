@@ -1,0 +1,69 @@
+﻿<div id="admin-panel">
+        <div id="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/order">Order</a></li>
+                <li><a href="/login">Logout</a></li>
+            </ul>
+        </div>
+    <div id="content">
+        <div id="navbar">
+            <h2>Dashboard</h2>
+          
+        </div>
+        <div id="order-item-details"></div>
+        
+    </div>
+</div>
+
+                
+@section scripts{
+    <script>
+        $(function(){
+            Auth();
+            CallAllMenuPartial();
+        })
+        function Auth(){
+           const token = localStorage.getItem("token");
+           if(token == null){
+               location.href = "/login";
+           }
+       }
+
+        
+
+        function CallAllMenuPartial(){
+            const id = localStorage.getItem("detailitem");
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("_orderitems", "Detail")',
+				type: "GET",
+                data: {id},
+				success: function(response){
+					$("#order-item-details").empty().append(response);
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+
+        function MarkAsDelivered(id){
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("MarkAsDelivered", "Order")',
+				type: "GET",
+                data: {id},
+				success: function(response){
+					alert("Item Mark as Delivered");
+                    CallAllMenuPartial();
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+    </script>
+}

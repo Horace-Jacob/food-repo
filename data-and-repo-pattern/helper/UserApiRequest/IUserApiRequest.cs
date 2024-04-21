@@ -14,6 +14,7 @@ namespace data_and_repo_pattern.helper.UserApiRequest
         Task<UserViewModel> LoginUser(tbUser user);
         Task<UserViewModel> CreateNewUser(RegisterViewModel user);
         Task<tbUser> GetUserByID(int id);
+        Task<int> GetUserCount();
 
     }
 }

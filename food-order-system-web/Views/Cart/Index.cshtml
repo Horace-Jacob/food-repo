@@ -89,6 +89,7 @@
                 data: {address, phonenumber, userid},
 				success: function(response){
 					CallCartPartial();
+                    location.href = "/cart";
 				},
 				error: function(error){
 					console.log(error)

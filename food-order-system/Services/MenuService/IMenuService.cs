@@ -7,5 +7,7 @@ namespace food_order_system.Services.MenuService
         Task<tbMenu> GetMenuById(int id);
         Task<List<tbMenu>> GetAllMenus();
         Task<tbMenu> CreateNewMenu(tbMenu menu);
+        Task<int> GetTotalMenu();
+        Task<int> DeleteMenu(int id);
     }
 }

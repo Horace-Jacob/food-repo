@@ -10,8 +10,8 @@
             <ul>
                 <li><a href="/">Dashboard</a></li>
                 <li><a href="/menu">Menu</a></li>
-                <li><a href="/">Order</a></li>
-                <li><a href="/">Logout</a></li>
+                <li><a href="/order">Order</a></li>
+                <li><a href="/login">Logout</a></li>
             </ul>
         </div>
 
@@ -19,7 +19,7 @@
             <div id="navbar">
                 <h2>Dashboard</h2>
                 <div>
-                    <a href="add_menu.html">Add menu</a>
+                    <a href="/add">Add menu</a>
                 </div>
             </div>
 
@@ -30,6 +30,7 @@
 @section scripts{
     <script>
         $(function(){
+             Auth();
             CallAllMenuPartial();
         })
         
@@ -47,5 +48,33 @@
 				}
 			})
         }
+
+        function EditMenuClick(id){
+            localStorage.setItem("edititem", id);
+            location.href = "/edit";
+        }
+
+        function RemoveMenuClick(id){
+            $.ajax({
+				cache: false,
+				url: '@Url.Action("RemoveMenu", "Menu")',
+				type: "GET",
+                data: {id},
+				success: function(response){
+                    alert("Menu Removed")
+					CallAllMenuPartial();
+				},
+				error: function(error){
+					console.log(error)
+				}
+			})
+        }
+
+        function Auth(){
+           const token = localStorage.getItem("token");
+           if(token == null){
+               location.href = "/login";
+           }
+       }
     </script>
 }

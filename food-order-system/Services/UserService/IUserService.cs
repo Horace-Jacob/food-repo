@@ -9,5 +9,6 @@ namespace food_order_system.Services.UserService
         Task<UserViewModel> CreateNewUser(RegisterViewModel user);
         Task<UserViewModel> LoginUser(tbUser user);
         Task<tbUser> GetUserByID(int id);
+        Task<int> GetUserCount();
     }
 }

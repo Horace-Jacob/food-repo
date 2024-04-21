@@ -35,5 +35,19 @@ namespace data_and_repo_pattern.helper.MenuApiRequest
             var result = await PostRequest<tbMenu>(url.route(Request.FoodOrderApi), menu);
             return result;
         }
+        public async Task<int> GetTotalMenu()
+        {
+            string url = $"api/menu/gettotalmenu";
+            var result = await GetRequest<int>(url.route(Request.FoodOrderApi));
+            return result;
+        }
+        public async Task<int> DeleteMenu(int id)
+        {
+            string url = $"api/menu/deletemenu?id={id}";
+            var result = await GetRequest<int>(url.route(Request.FoodOrderApi));
+            return result;
+        }
+
+
     }
 }

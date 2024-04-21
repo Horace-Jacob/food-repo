@@ -1,0 +1,25 @@
+﻿@model data_and_repo_pattern.ViewModel.OrderDetailViewModel
+
+<div class="order-info" id="order-info">
+            <h2>Order #@Model.OrderId</h2>
+<div class="info-row">
+    <p><strong>Customer Name:</strong> @Model.Name</p>
+    <p><strong>Phone Number:</strong> @Model.Phone</p>
+</div>
+<div class="info-row">
+    <p><strong>Address:</strong> @Model.Address</p>
+    <p><strong>Order Time:</strong> @Model.Time</p>
+</div>
+<h3>Order Items:</h3>
+<ul class="order-items">
+    <li>@Model.OrderItem x @Model.Quantity - $@Model.Price</li>
+</ul>
+<div class="info-row">
+    <p><strong>Status:</strong> @Model.Status</p>
+</div>
+</div>
+@if(Model.Status != "Delivered")
+{
+    <button id="mark-delivered-btn" onclick="MarkAsDelivered('@Model.OrderId')">Mark as Delivered</button>
+}
+

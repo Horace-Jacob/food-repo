@@ -20,8 +20,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Detail/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Detail/_orderitems.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsXF9vcmRlcml0ZW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Edit/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Edit/_editdata.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpdFxfZWRpdGRhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Home/Index.cshtml]
@@ -32,12 +44,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Home/_admindata.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfYWRtaW5kYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Menu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Menu/_allmenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxfYWxsbWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Order/_orderdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcX29yZGVyZGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Test/C\#Testing/food-order-system/food-order-system-admin/Views/Shared/Error.cshtml]

@@ -1,6 +1,7 @@
 ﻿using data_and_repo_pattern.database;
 using data_and_repo_pattern.uow;
 using data_and_repo_pattern.ViewModel;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
@@ -23,7 +24,7 @@ namespace food_order_system.Services.UserService
 
         public async Task<List<tbUser>> GetAllUsers()
         {
-            List<tbUser> users = await _uow.userRepo.GetWithoutTracking().ToListAsync();
+            List<tbUser> users = await _uow.userRepo.GetWithoutTracking().Where(a => a.Role != "Admin").ToListAsync();
             return users;
         }
 
@@ -81,6 +82,7 @@ namespace food_order_system.Services.UserService
                     uvm.status = "success";
                     uvm.token = token;
                     uvm.userid = existingUser.UserID;
+                    uvm.Role = existingUser.Role;
                     return uvm;
                 }
                 else
@@ -126,6 +128,10 @@ namespace food_order_system.Services.UserService
             }
         }
 
-
+        public async Task<int> GetUserCount()
+        {
+            var result = _uow.userRepo.GetAll().Where(a => a.Role != "Admin").Count();
+            return result;
+        }
     }
 }

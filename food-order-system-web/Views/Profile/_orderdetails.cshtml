@@ -5,8 +5,8 @@
                 <th>Order id</th>
                 <th>Order cost</th>
                 <th>Order Status</th>
+                <th>Order Item</th>
                 <th>Order Date</th>
-                <th>Order details</th>
                 
             </tr>
     @foreach(var order in Model)
@@ -22,11 +22,12 @@
                   <span>@order.Status</span>
                 </td>
                 <td>
-                  <span>@order.Time</span>
+                    <span>@order.OrderItem</span>
                 </td>
                 <td>
-                    <a href="/" class="btn order-details-btn">Details</a>
+                  <span>@order.Time</span>
                 </td>
+                
             </tr>
     }
             

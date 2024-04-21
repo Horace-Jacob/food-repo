@@ -30,6 +30,13 @@ namespace data_and_repo_pattern.helper.UserApiRequest
             return result;
         }
 
+        public async Task<int> GetUserCount()
+        {
+            string url = $"api/user/getusers";
+            var result = await GetRequest<int>(url.route(Request.FoodOrderApi));
+            return result;
+        }
+
         public async Task<UserViewModel> CreateNewUser(RegisterViewModel user)
         {
             string url = $"api/user/createuser";

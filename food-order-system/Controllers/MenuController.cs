@@ -27,6 +27,20 @@ namespace food_order_system.Controllers
             return Ok(result);
         }
 
+        [HttpGet("api/menu/gettotalmenu")]
+        public async Task<IActionResult> GetTotalMenu()
+        {
+            var result = await _imenu.GetTotalMenu();
+            return Ok(result);
+        }
+
+        [HttpGet("api/menu/deletemenu")]
+        public async Task<IActionResult> DeleteMenu(int id)
+        {
+            var result = await _imenu.DeleteMenu(id);
+            return Ok(result);
+        }
+
         [HttpPost("api/menu/createmenu")]
         public async Task<IActionResult> CreateNewMenu(tbMenu menu)
         {
